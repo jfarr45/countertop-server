@@ -1,0 +1,29 @@
+
+
+# Create countertop
+curl --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"unit_number": "204",
+  "left_wall_length": "54", "left_wall_depth": "25",
+  "back_wall_length": "86", "back_wall_depth": "25",
+  "right_wall_length": " ", "right_wall_depth": " ",
+  "left_finish": "Finish", "left_endsplash": "No",
+  "right_finish": "Raw", "right_endsplash": "Yes"} ' \
+  https://countertopmeasure.herokuapp.com//api/countertops
+
+# Update counterop
+curl --header "Content-Type: application/json" \
+  --request PUT \
+  --data '{"unit_number": "104",
+  "left_wall_length": " ", "left_wall_depth": " ",
+  "back_wall_length": "71", "back_wall_depth": "22",
+  "right_wall_length": " ", "right_wall_depth": " ",
+  "left_finish": "Finish", "left_endsplash": "No",
+  "right_finish": "Finish", "right_endsplash": "No"} '  \
+  https://countertopmeasure.herokuapp.com//api/countertops
+
+
+ # Update countertop
+curl --header "Content-Type: application/json" \
+  --request DELETE \
+  https://countertopmeasure.herokuapp.com//api/countertops
